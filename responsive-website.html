@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <title>iEducate - Transforming Online Education</title>
+    <style>
+         *{
+            margin:0px;
+            padding:0px;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        .navbar{
+            display: flex;
+            cursor:pointer;
+            justify-content: center;
+            align-items: center;
+            position: sticky;
+           top:0;
+         
+            
+        }
+        .listt{
+            display:flex;
+            width:70%;
+            align-items: center;
+           
+            /* background-color: black; */
+           
+        }
+        .listt li{
+            list-style:none;
+
+        }
+        .listt li a{
+            text-decoration: none;
+            color:white;
+            padding: 15px;
+            margin:4px;
+            font-size: 18px;
+        }
+        .listt li a:hover{
+            color:red;
+        }
+       .logo{
+       
+       width:30%;
+       display:flex;
+       justify-content: center;
+
+     
+      
+        align-items: center;
+       
+          
+          
+         
+       }
+       .logo img{
+        width:30%;
+        
+        
+        /* border:2px solid white; */
+        border-radius: 40px;
+        box-shadow: 4px 3px 5px 5px rgb(88, 84, 84,0.5);
+        
+
+        
+       }
+       #search{
+        border-radius: 4px;
+        padding:4px;
+       }
+       .btn{
+        
+        border-radius: 5px;
+       }
+       .rightnav{
+        
+        justify-content: center;
+       text-align: right;
+        /* background-color:black; */
+        width:30%;
+       }
+       .background{
+       
+        
+        background:rgba(0,0,0,0.7) url('https://www.greenbiz.com/sites/default/files/images/articles/featured/buildingsjl661227sstock.png');
+        background-size: cover;
+        background-blend-mode: darken;
+       }
+       .secondhalf{
+        width:20%;
+       }
+       .secondhalf img{
+        width:300px;
+        border-radius: 20px;
+        padding:10px 0px;
+        margin:10px;
+       
+       }
+       .firstsection{
+        height: 100vh;
+       
+       }
+       .box-main{
+        display: flex;
+        width:100%;
+        height: 60vh;
+        justify-content: center;
+        align-items: center;
+        color:white;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin:auto;
+       
+        
+
+       }
+       .text1{
+        font-size:25px;
+       }
+       .text2{
+        font-size:15px;
+       }
+       .btn{
+        padding:8px 10px;
+        margin:10px 3px;
+        border:2px solid white;
+        border-radius: 8px;
+        font-size:12px;
+        background: none;
+        color:white;
+        cursor: pointer;
+       }
+       .btn:hover{
+        color:red;
+       }
+       .btn-sm{
+        padding: 3px 10px;
+        vertical-align:middle;
+       }
+
+       .secright{
+        /* height:250px; */
+        display:flex;
+        align-items: center;
+        justify-content: space-evenly;
+        max-width:80%;
+        margin:auto;
+        /* margin-top: 15px; */
+
+       }
+      
+       .secleft{
+       
+        flex-direction: row-reverse;
+       
+       }
+       .right{
+        /* height:250px; */
+       }
+       .thumbnail{
+        width:100%;
+     
+       }
+      
+       .thumbnail img{
+        width:80%;
+        border-radius: 20px;
+       }
+       .para{
+        padding:10px 50px;
+       }
+       .sectiontag{
+        padding:16px 0px;
+       }
+       .contact{
+        margin:15px 0px 0px 10px;
+        height:80vh;
+       }
+      
+       .text-center{
+        text-align: center;
+
+        /* margin:10px 0px 5px 0px; */
+       }
+      
+       .form{
+        max-width:62%;
+       margin:42px auto;
+       margin-top:4px;
+       /* text-align: center; */
+       
+       /* text-align: center; */
+       }
+       .form-input{
+        display:block;
+       
+        width:95%;
+        font-size: 19px;
+        padding:5px 3px ;
+        margin:10px 0px 10px 5px;
+
+        border:2px solid grey;
+        border-radius: 5px;
+       
+       
+       }
+       /* #name{
+        width:40%;
+        margin:2px;
+       }
+       #phone{
+
+        margin:2px;
+       }
+       #email{
+        margin:2px;
+       } */
+      
+       .btnn{
+
+        width:100px;
+        margin:auto;
+        border:2px solid black;
+        border-radius: 6px;
+        background-color:black;
+        color:white;
+        
+       }
+       .btnn:hover{
+        color:red;
+       }
+       /* .formm{
+        /* border:2px solid black; */
+       /* max-width:100%; */
+      /* text-align: center; */
+   
+        
+        
+       .burger{
+        display:none;
+        position:absolute;
+        cursor:pointer;
+        right:5%;
+        top:15px;
+       }
+       .line{
+        width:33px;
+        background-color: white;
+        height:4px;
+        margin:3px 3px;
+       }
+       .text-footer{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        color:white;
+        height:5vh;
+       }
+       .formm{
+        box-shadow: 3px 3px 10px 5px rgb(15, 15, 15);
+       }
+       .form{
+        /* background-color: rgb(6, 231, 231); */
+       }
+       .label{
+        font-family: 'Ubuntu',sans-serif;
+        font-weight: solid;
+        font-size: 19px;
+        margin:10px 0px 10px 5px;
+
+       }
+       /* .welcome{
+        font-size: 30px;
+    
+    display: flex;
+    justify-content: center;
+    transition: all 1s ease-in-out;
+       }
+       .welcome:hover{
+        color: red;
+     
+        border:15px;
+        font-size:50px;
+       } */
+       .ni{
+        color:white;
+        width:250px;
+        /* border:2px solid red; */
+        /* background-color: black; */
+         padding:40px;
+        border-radius:20px;
+        text-align: center;
+        font-size: 40px;
+        animation-name: nis;
+        animation-duration:  2s;
+        animation-timing-function:  ease-in;
+        animation-delay:  2s;
+        animation-iteration-count:  1000;
+        animation-fill-mode:  forward;
+       }
+       @keyframes nis{
+          from {
+            width:200px;
+          }
+          to{
+            width:700px;
+          }
+       }
+       @media only screen and (max-width:1084px){
+        .listt{
+            flex-direction: column;
+        }
+        .listt li{
+            margin:25px;
+           
+        }
+        .listt li a{
+            margin:30px;
+            padding:30px;
+        }
+        .navbar{
+            height:450px;
+            flex-direction: column;
+            transition:all 0.7s ease-out;
+        }
+        .rightnav{
+            text-align: center;
+        }
+        #search{
+            width:100%;
+        }
+        .box-main{
+            flex-direction: column-reverse;
+            max-width:100%;
+            margin:auto;
+        }
+        
+        .burger{
+            display:block;
+            padding:4px;
+            margin:2px;
+        }
+        .h-nav-resp{
+            height:72px;
+        }
+        .v-class-resp{
+         opacity: 0;   
+        }
+        
+        .secright{
+            flex-direction: column-reverse;
+        }
+        .text1{
+            text-align:center;
+        }
+        .text2{
+            text-align:center;
+        }
+        .buttons{
+            width:100%;
+            margin:auto;
+        }
+        .para{
+            padding:0px;
+        }
+        .firsthalf{
+            width:100%;
+            text-align:center;
+        }
+        .secondhalf {
+             width:100%;
+             text-align:center;
+        }
+        .secondhalf img{
+            width:175px;
+            /* text-align:center; */
+        }
+        .thumbnail {
+            text-align:center;
+        }
+        .thumbnail img{
+            width:200px;
+            margin-top:15px;
+        }
+       }
+       @media only screen and (max-width:600px){
+
+       }
+
+       
+         
+    </style>
+</head>
+<body>
+
+    <nav class="navbar background h-nav-resp">
+       
+        <ul class="listt v-class-resp">
+            <div class="logo">
+                <img src="	https://th.bing.com/th/id/OIP.aTOMq5GsCcyXvGfRlcEBdAHaE5?pid=ImgDet&rs=1" alt="logo">
+            </div>
+           
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#Services">Services</a></li>
+            <li><a href="#Contact">Contact Us</a></li>
+           
+        </ul>
+        <div class="rightnav v-class-resp" >
+            <label for="search"></label>
+            <input type="text" placeholder="search " name="search" id="search">
+            <button class="btn btn-sm">Search</button>
+        </div>
+        <div class="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+    
+    <section class="background firstsection">
+        <p class="ni">iEducate</p>
+        <!-- <p class="welcome"> Welcome!</p> -->
+     <div class="box-main">
+            <div class="firsthalf">
+                 <p class="text1"> The Future of Education is here</p> 
+                 <p class="text2"> In this world of 7 billion people we need to educate all of them.this is the future of educated world.</p>
+                 <div class="buttons">
+                    <button class="btn">Subscribe</button>
+                    <button class="btn">Watch video</button>
+                 </div>
+            </div>
+            <div class="secondhalf">
+                <img src="https://hjaaccountants.com.au/wp-content/uploads/2017/02/overwrite.png" alt="laptop img">
+            </div>
+        </div>
+    </section>
+    <section class="secright ">
+        <div class="para">
+        <p class="sectiontag text1">The end of illiteracy is here</p>
+        <p class="sectionsubtag text2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae officiis voluptates unde vitae laboriosam eos et, reprehenderit sit tenetur! Quibusdam porro corrupti optio est magni magnam a provident voluptatum non officia facere ut cum labore amet ea ducimus, autem dolor sequi nulla maxime voluptatibus, soluta corporis obcaecati! Illo neque ad deleniti quisquam ipsam perferendis ipsa cum qui harum, eos animi nemo illum ab rerum ut magni. Magni facere reiciendis velit recusandae ullam modi quo quod suscipit magnam! Saepe quos doloremque unde, natus voluptatum dolorem voluptates voluptatem aut maiores ut optio sapiente nobis cum aperiam repellat nemo sit hic tenetur ipsa.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero eum molestias nemo odio saepe dolores minima quidem quam nulla dolorum facere aspernatur omnis quos illo, dicta quae culpa est, non recusandae eos placeat nobis ullam autem doloremque. Accusamus, cumque dolores.</p>
+      </div>
+        <div class="thumbnail ">
+     <img src="https://cdn8.dissolve.com/p/D538_340_002/D538_340_002_1200.jpg" class="imgfluid">
+   </div>
+    </section>
+    <section class=" secright secleft right">
+        <div class="para">
+        <p class="sectiontag text1">Transforming Education in India</p>
+        <p class="sectionsubtag text2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae officiis voluptates unde vitae laboriosam eos et, reprehenderit sit tenetur! Quibusdam porro corrupti optio est magni magnam a provident voluptatum non officia facere ut cum labore amet ea ducimus, autem dolor sequi nulla maxime voluptatibus, soluta corporis obcaecati! Illo neque ad deleniti quisquam ipsam perferendis ipsa cum qui harum, eos animi nemo illum ab rerum ut magni. Magni facere reiciendis velit recusandae ullam modi quo quod suscipit magnam! Saepe quos doloremque unde, natus voluptatum dolorem voluptates voluptatem aut maiores ut optio sapiente nobis cum aperiam repellat nemo sit hic tenetur ipsa.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero eum molestias nemo odio saepe dolores minima quidem quam nulla dolorum facere aspernatur omnis quos illo, dicta quae culpa est, non recusandae eos placeat nobis ullam autem doloremque. Accusamus, cumque dolores.</p>
+      </div>
+        <div class="thumbnail">
+     <img src="https://www.thecryptoupdates.com/wp-content/uploads/2019/01/gaming-laptop-keyboards-2.jpg" class="imgfluid">
+   </div>
+    </section>
+    <section class=" secright right ">
+        <div class="para">
+        <p class="sectiontag text1">Lets Grow together</p>
+        <p class="sectionsubtag text2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae officiis voluptates unde vitae laboriosam eos et, reprehenderit sit tenetur! Quibusdam porro corrupti optio est magni magnam a provident voluptatum non officia facere ut cum labore amet ea ducimus, autem dolor sequi nulla maxime voluptatibus, soluta corporis obcaecati! Illo neque ad deleniti quisquam ipsam perferendis ipsa cum qui harum, eos animi nemo illum ab rerum ut magni. Magni facere reiciendis velit recusandae ullam modi quo quod suscipit magnam! Saepe quos doloremque unde, natus voluptatum dolorem voluptates voluptatem aut maiores ut optio sapiente nobis cum aperiam repellat nemo sit hic tenetur ipsa.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero eum molestias nemo odio saepe dolores minima quidem quam nulla dolorum facere aspernatur omnis quos illo, dicta quae culpa est, non recusandae eos placeat nobis ullam autem doloremque. Accusamus, cumque dolores.</p>
+      </div>
+        <div class="thumbnail">
+     <img src="https://cdn8.dissolve.com/p/D2012_107_006/D2012_107_006_1200.jpg" class="imgfluid">
+   </div>
+    </section>
+    <section class="contact" id="contact">
+        <h2 class="text-center">Contact Us</h2>
+        <div class="form">
+            <div class="formm">
+                <label for="name" class="label"> Name:</label>
+            <input class="form-input " type="text" name="name" id="name" placeholder="Enter your Name">
+            <label for="phone" class="label">Contact:</label>
+
+            <input class="form-input "type="text" name="phone" id="phone" placeholder="Enter your Contact no">
+            <label for="email" class="label">Email:</label>
+
+            <input class="form-input "type="email" name="email" id="email" placeholder="Write your Email ">
+            <label for="text" class="label">Your Concern:</label>
+
+           <textarea class="form-input "name="text" id="text" cols="30" rows="10" placeholder="Elaborate your concern"> </textarea>
+          
+        </div>
+            <button class="btnn btn-sm">Submit</button>
+          
+           </div>
+        
+
+
+    </section>
+    <footer class="background">
+        <p class="text-footer">
+        copyright &copy; 2027 www.iEducate-All rights reserved
+        </p>
+    </footer>
+    </div>
+    
+</div>
+<script>
+    burger=document.querySelector('.burger')
+navbar=document.querySelector('.navbar')
+listt=document.querySelector('.listt')
+rightnav=document.querySelector('.rightnav')
+burger.addEventListener('click',()=>{
+   listt.classList.toggle('v-class-resp');
+   rightnav.classList.toggle('v-class-resp');
+   navbar.classList.toggle('h-nav-resp');
+})
+</script>
+
+</body>
+
+</html>
